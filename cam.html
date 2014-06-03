@@ -1,0 +1,192 @@
+
+
+
+
+
+
+<html> 
+
+<head> 
+<meta type="application/x-mplayer2"> 
+<script src="http://wac.4203.go-live.co.il/004203/flowplayer-3.2.6.min.js"></script> 
+
+
+ 
+
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+.style2 {font-family: Arial, Helvetica, sans-serif}
+-->
+</style>
+</head> 
+
+<body> 
+
+<div id="player" style="width:440px;height:340;" align="center"></div> 
+
+<script>/*flowplayer.commercial-3.2.0-5.swf*/
+
+        flowplayer("player", "http://wac.4203.go-live.co.il/004203/flowplayer.commercial-3.2.7.swf",  {
+
+	        // player configuration goes here
+
+        key: '#$21f554ae7b993e33c1e',
+
+		// url of the logo and the link it sends to, also the amount of time the logo is shown
+
+		logo: {
+
+		url: 'http://wac.4203.go-live.co.il/004203/Tzalam_Logo.png',
+
+		linkUrl: 'http://go-live.co.il' ,
+
+		linkWindow: '_blank' ,
+
+		fullscreenOnly: false,
+
+		displayTime: 9000
+
+		 
+
+	},
+
+		
+
+           // set a jpeg as a preroll remove marks and add the playlist[{.... } 
+
+        playlist: [
+		
+	                    	{
+		   
+		 url: 'http://wac.4203.go-live.co.il/004203/Eldan.jpg' ,
+		 duration: 3, 
+		 scaling: 'fit' ,
+		 linkUrl: 'http://www.eldan.co.il/landing/sale/2013-04-01/',
+		 linkWindow:'_blank' } ,
+		 
+          //                      {
+           //  url: 'http://wac.4203.go-live.co.il/004203/DigiFrame.jpg' ,   
+			// duration: 3 ,
+			// scaling: 'fit' ,
+			// linkUrl: 'http://www.digiman.co.il/viewCategory.asp?catID=160',
+			// linkWindow:'_blank' },
+			
+			 
+			 
+		 	 {url: 'http://wac.4203.go-live.co.il/004203/SponSors_July_2013.jpg' ,
+			  duration: 2 ,
+			  scaling: 'fit'  
+
+               },
+
+            {
+
+			// third clip uses a different RTMP server
+
+			provider: 'rtmp2',
+
+			url:'mp4:tzalamyam'      ,live:true 
+			//,autoPlay: false
+
+			// next three lines disables the pause in the livestream
+
+	//		linkUrl: '', 
+
+    //     bufferLength: '1',
+
+    //     onBeforePause: function() { return false; }
+
+		}  
+
+               ],
+
+       
+
+  
+
+    
+
+	plugins: {
+
+	// set what you want in the player control
+
+	controls: {
+
+			url: 'http://wac.4203.go-live.co.il/004203/flowplayer.controls-3.2.5.swf',
+
+			
+
+			all: false ,
+
+			play: true,
+
+			volume: false,
+
+			mute: false,
+
+			scrubber: false,
+
+			fullscreen: true,
+
+			autoHide: false,
+
+			buttonColor: 'rgba(0, 0, 0, 0.9)',
+
+			buttonOverColor: '#FF9900',
+
+			backgroundColor: '#6699CC',
+
+			backgroundGradient: 'medium',
+
+			sliderColor: '#FFFFFF',
+
+			sliderBorder: '1px solid #808080',
+
+			volumeSliderColor: '#FFFFFF',
+
+			volumeBorder: '1px solid #CC9966',
+
+			timeColor: '#000000',
+
+			durationColor: '#9900FF' ,
+
+			bufferColor: 'CC6633' 
+
+		} ,
+
+	
+
+	
+
+		  rtmp: { url: 'http://wac.4203.go-live.co.il/004203/flowplayer.rtmp-3.2.3.swf',
+
+                netConnectionUrl: 'rtmp://playertzalamyam.go-live.co.il/2009E3/' ,                   
+
+		          subscribe:true          
+
+		        }  ,
+
+		  rtmp2: {  url: 'http://wac.4203.go-live.co.il/004203/flowplayer.rtmp-3.2.3.swf',
+
+		          netConnectionUrl: 'rtmp://fml.4203.edgecastcdn.net/204203/' ,
+
+                          
+
+		          subscribe:true
+
+                          
+
+		        }
+
+		    }
+
+					    });
+
+</script> 
+</body>
+
+ </html>
